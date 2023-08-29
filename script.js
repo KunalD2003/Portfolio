@@ -26,4 +26,26 @@ window.onscroll = () =>{
 
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100  );
+
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 };
+
+ScrollReveal({
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200 
+});
+ScrollReveal().reveal('.home-content, .heading',{ origin: 'top'});
+ScrollReveal().reveal('.home-img, .about-content, .skills-container, .skill-box, .projects-container, project-box, .contact form',{ origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1',{ origin: 'left'});
+ScrollReveal().reveal('.home-content p',{ origin: 'left'});
+
+const typed  = new Typed(' .multiple-text',{
+    strings: ['Frontend Developer', 'Computer Science Student'],
+    typeSpeed: 75,
+    backSpeed: 75,
+    backDelay: 750,
+    loop: true
+}); 
