@@ -1,15 +1,15 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () =>{
+menuIcon.addEventListener('click', () =>{
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}
+})
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-window.onscroll = () =>{
+window.addEventListener('scroll',() =>{
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
@@ -29,7 +29,7 @@ window.onscroll = () =>{
 
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
-};
+});
 
 ScrollReveal({
     // reset: true,
